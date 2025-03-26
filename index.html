@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Object Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            background:red;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Date Object Demo</h1>
+
+    <button onclick="showCurrentDate()">Show Current Date</button>
+    <button onclick="addDays()">Add 7 Days</button>
+    <button onclick="setCustomDate()">Set Custom Date</button>
+
+    <div id="output"></div>
+
+    <script>
+        function showCurrentDate() {
+            const currentDate = new Date();
+            document.getElementById('output').innerHTML = 
+                <strong>Current Date and Time:</strong> ${currentDate};
+        }
+
+        function addDays() {
+            const date = new Date();
+            date.setDate(date.getDate() + 7);
+            document.getElementById('output').innerHTML = 
+                <strong>Updated Date (+7 Days):</strong> ${date};
+        }
+
+        function setCustomDate() {
+            const date = new Date();
+            date.setFullYear(2030, 5, 15);
+            document.getElementById('output').innerHTML = 
+                <strong>Custom Date:</strong> ${date};
+        }
+    </script>
+
+</body>
+</html>
