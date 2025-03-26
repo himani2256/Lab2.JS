@@ -24,7 +24,7 @@
         button {
             margin: 5px;
             padding: 10px 20px;
-            background:red;
+            background: red;
             color: #fff;
             border: none;
             cursor: pointer;
@@ -56,21 +56,21 @@
         function showCurrentDate() {
             const currentDate = new Date();
             document.getElementById('output').innerHTML = 
-                <strong>Current Date and Time:</strong> ${currentDate};
+                `<strong>Current Date and Time:</strong> ${currentDate}`;
         }
 
         function addDays() {
             const date = new Date();
             date.setDate(date.getDate() + 7);
             document.getElementById('output').innerHTML = 
-                <strong>Updated Date (+7 Days):</strong> ${date};
+                `<strong>Updated Date (+7 Days):</strong> ${date}`;
         }
 
         function setCustomDate() {
             const date = new Date();
-            date.setFullYear(2030, 5, 15);
+            date.setFullYear(2030, 5, 15); // June 15, 2030 (months are 0-indexed)
             document.getElementById('output').innerHTML = 
-                <strong>Custom Date:</strong> ${date};
+                `<strong>Custom Date:</strong> ${date}`;
         }
     </script>
 
